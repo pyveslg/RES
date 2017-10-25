@@ -1,0 +1,5 @@
+<%= simple_form_for [@mfe, @expression] do |f| %>
+  <%= f.input :expfr %>
+  <%= f.input :expen %>
+  <%= f.submit "add an expression to mfe", class: "btn btn-primary" %>
+<% end %>

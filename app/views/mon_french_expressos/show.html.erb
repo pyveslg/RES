@@ -1,0 +1,14 @@
+
+<%= link_to "edit", edit_mon_french_expresso_path(@mfe)  %>
+<p>Aujourd'hui, apprends à <%= @mfe.learn %>.</p>
+<p>Expression</p>
+<%= link_to "Add expression", new_mon_french_expresso_expression_path(@mfe)  %>
+<ul>
+  <% @mfe.expressions.each do |expression|  %>
+  <li><%= markdown(expression.expfr) %></li>
+  <% end %>
+</ul>
+
+
+
+

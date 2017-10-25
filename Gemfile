@@ -17,6 +17,9 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 
+#Markdown
+gem 'redcarpet'
+
 group :development, :test do
   gem "letter_opener"
   gem 'pry-byebug'

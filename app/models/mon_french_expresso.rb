@@ -1,3 +1,3 @@
 class MonFrenchExpresso < ApplicationRecord
-  has_many :expressions
+  has_many :expressions, dependent: :destroy
 end

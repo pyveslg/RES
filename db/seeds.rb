@@ -40,4 +40,30 @@ mfes_attributes = [
 ]
 
 MonFrenchExpresso.create!(mfes_attributes)
+
+puts 'Creating Expressions...'
+
+
+expression_attributes = [
+  {
+    expfr: "<b>Voici</b> Pierre ! C'est mon ami.",
+    expen: "Here is Pierre! He is my friend.",
+    mon_french_expresso_id: 13
+  },
+
+  {
+    expfr: "Je <b>vous présente</b> Annie.",
+    expen: "Let me introduce you to Annie.",
+    mon_french_expresso_id: 13
+  },
+
+  {
+    expfr: "Je <b>le pense aussi</b>.",
+    expen: "I think so as well.",
+    mon_french_expresso_id: 14
+  }
+]
+
+Expression.create!(expression_attributes)
+
 puts 'Finished!'
