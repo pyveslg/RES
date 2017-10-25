@@ -1,0 +1,2 @@
+class MonFrenchExpressosController < ApplicationController
+end
