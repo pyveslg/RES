@@ -1,2 +1,0 @@
-class Mfe < ApplicationRecord
-end

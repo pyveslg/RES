@@ -1,6 +1,6 @@
-class CreateMves < ActiveRecord::Migration[5.0]
+class CreateMonFrenchExpressos < ActiveRecord::Migration[5.0]
   def change
-    create_table :mves do |t|
+    create_table :mon_french_expressos do |t|
       t.string :intro
       t.string :learn
       t.string :question1

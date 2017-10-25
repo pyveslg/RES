@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025111158) do
+ActiveRecord::Schema.define(version: 20171025113107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "mves", force: :cascade do |t|
+  create_table "expressions", force: :cascade do |t|
+    t.string   "expfr"
+    t.string   "expen"
+    t.integer  "mon_french_expresso_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["mon_french_expresso_id"], name: "index_expressions_on_mon_french_expresso_id", using: :btree
+  end
+
+  create_table "mon_french_expressos", force: :cascade do |t|
     t.string   "intro"
     t.string   "learn"
     t.string   "question1"
@@ -49,4 +58,5 @@ ActiveRecord::Schema.define(version: 20171025111158) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "expressions", "mon_french_expressos"
 end
